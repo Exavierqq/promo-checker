@@ -1,5 +1,18 @@
-# PROMO CHECKER
+# Promotion-Code-Checker
+This code specifies using the api endpoint to check if the "promotion" code provided by discord is valid or not.
 
-Im tired of selling stuff that i have been sold that is off github or stuff i found off github and improved a bit but this promo checker was sold to me and it was released to the public by https://github.com/Switch3301.
+# Info 
 
-It works via a token bypass of api with no locks if you have alot of tokens if you prefer to use proxies instead i fan sell you a version that has just straight proxy support for 1$.
+You need to have email verified discord tokens to use this code.
+Proceed with putting 1 token in "token" format in every line of data/tokens.txt (The more you put the better)
+This is a way to bypass discord rate limits by providing a token in authorization header.
+You then need to put all ur promo codes in input/codes.txt and run the code.
+
+# Contact
+
+Discord : discord.gg/wizboosts
+
+# Info 2 
+
+This code is only meant for test and educational purposes exploiting the discord api. This is not recommended to be used for any bad purposes or if so it will be considered not my fault
+This script is for only knowing and understanding the discord api.The tokens used and this method can be patched anytime by discord .
