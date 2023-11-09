@@ -105,6 +105,11 @@ def remove_line(arg : None):
                 if line.strip("\n") != arg:
                     f.write(line)
 
+def read_proxies():
+    with open('data/proxies.txt', 'r') as f:
+        proxies = f.readlines()
+    return proxies
+    
 def title():
     ctypes.windll.kernel32.SetConsoleTitleW(f"WIZ BOOST Promo Checker | Total Loaded: {str(total)} | Valid:{str(valid)} | Invalid: {str(invalid)}")
     
@@ -113,7 +118,10 @@ class Checker():
         global valid
         global invalid
         self.token = get_random_line().strip('\n')
-        self.client = tls_client.Session(client_identifier = "chrome_108")
+        self.proxies = {
+            'http': random.choice(read_proxies()), #Change to https if having problems
+        }
+        self.client = tls_client.Session(client_identifier = "chrome112", proxies=self.proxies)
         self.useragent = useragent
         self.code = code.strip('\n').replace('https://discord.com/billing/promotions/', '').replace('https://promos.discord.gg/', '').replace('/', '').replace('\n','')
         self.url = f"https://discord.com/api/v9/entitlements/gift-codes/{self.code}?with_application=false&with_subscription_plan=true"
